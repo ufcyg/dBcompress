@@ -7,9 +7,9 @@ disp(strcat("Loading data..."," - ",ctime(time())));
 load("dbConverted.mat");
 disp(strcat("...done", " - ", ctime(time())));
 
-filename = DateFileName("C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\siteDB"); # set filename for siteDB
+filename = DateFileName("C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\siteDBtest"); # set filename for siteDB
 UnpackToXML(filename,appdata.data.site.targetDB);
-filename = DateFileName("C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\actionDB");
+filename = DateFileName("C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\actionDBtest");
 UnpackToXML(filename,appdata.data.action.targetDB);
 for i=2:1:appdata.data.site.size
   foldername = "C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\suppliedHouses";
