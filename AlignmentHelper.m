@@ -14,18 +14,24 @@ for i=2:1:size(rawDB,1)
   addressUnknown = cell(1);
   addressUnknown{1} = 1;
   if !isempty(rawDB(i,26){})
-    if !strcmp(rawDB(i,26){},targetDB(i,12){})
-      rawDBentry = rawDB(i,26){};
-      targetDBentryStreet = targetDB(i,12){};
-      targetDBentryNumber = targetDB(i,13){};
-      streetScore = NeedlemanWunschAlignment(rawDBentry,targetDBentryStreet);
-      houseNumberScore = NeedlemanWunschAlignment(rawDBentry,targetDBentryNumber);
-      if streetScore > -0.9
-        addressUnknown{1} = 0;
-      endif
-      if houseNumberScore == 0
-        #address is known
-        addressUnknown{1} = 0;
+    if !isempty(targetDB(i,12){})
+      if !isempty(targetDB(i,13){})
+        if !strcmp(rawDB(i,26){},targetDB(i,12){})
+          rawDBentry = rawDB(i,26){};
+          targetDBentryStreet = targetDB(i,12){};
+          targetDBentryNumber = targetDB(i,13){};
+          streetScore = NeedlemanWunschAlignment(rawDBentry,targetDBentryStreet);
+          houseNumberScore = NeedlemanWunschAlignment(rawDBentry,targetDBentryNumber);
+          if streetScore > -0.9
+            addressUnknown{1} = 0;
+          endif
+          if houseNumberScore == 0
+            #address is known
+            addressUnknown{1} = 0;
+          endif
+        else
+          addressUnknown{1} = 0;
+        endif
       endif
     endif
   endif
