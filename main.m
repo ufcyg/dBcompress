@@ -22,9 +22,9 @@ tietgenData = appdata.data;
 clear appdata;
 disp(strcat("...done", " - ", ctime(time())));
 
+disp(strcat("Generating targetDB var...", " - ", ctime(time())));
 targetDB = GenerateTargetDB(12525);
-
-foldername = "C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\suppliedHouses";
+disp(strcat("...done", " - ", ctime(time())));
 
 #Jule 2 - 3370
 disp(strcat("Merging franke...", " - ", ctime(time())));
