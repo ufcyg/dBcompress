@@ -42,6 +42,6 @@ for i=2:1:size(rawDB,1)
 endfor
 
 if writeToXML
-  filename = DateFileName("C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\siteDBnw");
+  filename = DateFileName("C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\siteDBneedlew");
   UnpackToXML(filename,modifiedDB);
 endif

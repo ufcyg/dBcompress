@@ -8,7 +8,7 @@ disp(strcat("Starting supplied House list extraction..."," - ",ctime(time())));
 
 foldername = "C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\suppliedHouses\\franke";
 
-if 0
+if 1
   #Jule 2 - 3370
   disp(strcat("Supplied houses jule...", " - ", ctime(time())));
   load("dataFranke.mat");
@@ -16,7 +16,7 @@ if 0
   GetSuppliedHouses(frankeData,2,3370,foldername);
   disp(strcat("...done", " - ", ctime(time())));
 endif
-if 0
+if 0#
   #Arne 3371 - 3749
   disp(strcat("Supplied houses arne1...", " - ", ctime(time())));
   load("dataBeator.mat");
@@ -24,7 +24,7 @@ if 0
   GetSuppliedHouses(beatorData,3371,3749,foldername);
   disp(strcat("...done", " - ", ctime(time())));
 endif
-if 0
+if 1
   #Antje 3750 - 6262
   disp(strcat("Supplied houses antje...", " - ", ctime(time())));
   load("dataMast.mat");
@@ -32,7 +32,7 @@ if 0
   GetSuppliedHouses(mastData,3750,6262,foldername);
   disp(strcat("...done", " - ", ctime(time())));
 endif
-if 0
+if 0#
   #Daniela 6263 - 7571
   disp(strcat("Supplied houses daniela...", " - ", ctime(time())));
   load("dataPeukert.mat");
@@ -40,7 +40,7 @@ if 0
   GetSuppliedHouses(peukertData,6263,7571,foldername);
   disp(strcat("...done", " - ", ctime(time())));
 endif
-if 0
+if 1
   #Arne 7572 - 10260
   disp(strcat("Supplied houses arne2...", " - ", ctime(time())));
   load("dataBeator.mat");
@@ -48,7 +48,7 @@ if 0
   GetSuppliedHouses(beatorData,7572,10260,foldername);
   disp(strcat("...done", " - ", ctime(time())));
 endif
-if 1
+if 0#
   #Christina 10261 - 10917
   disp(strcat("Supplied houses christina...", " - ", ctime(time())));
   load("dataTietgen.mat");
@@ -56,7 +56,7 @@ if 1
   GetSuppliedHouses(tietgenData,10261,10917,foldername);
   disp(strcat("...done", " - ", ctime(time())));
 endif
-if 0
+if 1
   #Arne 10918 - 12525
   disp(strcat("Supplied houses arne3...", " - ", ctime(time())));
   load("dataBeator.mat");
