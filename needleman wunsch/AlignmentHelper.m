@@ -5,9 +5,10 @@ clear; # clear variables
 reload = 0;
 writeToXML = 1;
 disp(strcat("Starting alignment..."," - ",ctime(time())));
-load("dbMerged.mat");
-load("dbRaw.mat");
-modifiedDB = targetDB;
+load("dbConverted.mat");
+modifiedDB = appdata.data.site.targetDB;
+targetDB = appdata.data.site.targetDB;
+rawDB = appdata.data.site.raw;
 endif
 #targetDB(1,12) straﬂe
 for i=2:1:size(rawDB,1)
@@ -40,7 +41,8 @@ for i=2:1:size(rawDB,1)
   endif
   modifiedDB(i,26) = addressUnknown;
 endfor
-
+appdata.data.site.targetDB = modifiedDB;
+save -zip dbConvertedNW.mat appdata;
 if writeToXML
   filename = DateFileName("C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\siteDBneedlew");
   UnpackToXML(filename,modifiedDB);

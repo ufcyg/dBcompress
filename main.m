@@ -60,10 +60,10 @@ save -zip dbMerged.mat targetDB;
 disp(strcat("...done", " - ", ctime(time())));
 
 disp(strcat("Writing DB to XML...", " - ", ctime(time())));
-filename = DateFileName("C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\siteDBtest");
+filename = DateFileName("C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\siteDBmaster");
 UnpackToXML(filename,targetDB);
 disp(strcat("...done", " - ", ctime(time())));
 return;
 # comment the return above to also extract the action DB
-filename = DateFileName("C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\actionDBtest");
+filename = DateFileName("C:\\Users\\10300202\\Desktop\\Praxedo\\ASZPM DB Rebuild\\Database\\target\\actionDBmaster");
 UnpackToXML(filename,actionTargetDB);
